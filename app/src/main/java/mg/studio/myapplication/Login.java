@@ -3,6 +3,8 @@ package mg.studio.myapplication;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -44,6 +46,7 @@ public class Login extends AppCompatActivity {
     private SessionManager session;
     private Feedback feedback;
     private Button loginButton;
+    private  boolean isAvailable=false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -113,14 +116,59 @@ public class Login extends AppCompatActivity {
 
             //Todo : ensure the user has Internet connection
 
-            // Display the progress Dialog
-            progressDialog.setMessage("Logging in ...");
-            if (!progressDialog.isShowing())
-                progressDialog.show();
+                ConnectivityManager connManager = (ConnectivityManager) this
+                        .getSystemService(CONNECTIVITY_SERVICE);
+            NetworkInfo[] networkInfo=null;
+                try {
+                   networkInfo = connManager.getAllNetworkInfo();
+                }catch (NullPointerException e)
+                {
+                    e.printStackTrace();
+                }
+
+               // isAvailable=networkInfo.isAvailable();
+
+                    for (int i = 0; i < networkInfo.length; i++) {
+                        // 判断获得的网络状态是否是处于连接状态
+                        if (networkInfo[i].getState() == NetworkInfo.State.CONNECTED) {
+
+                            // Display the progress Dialog
+                            progressDialog.setMessage("Logging in ...");
+                            if (!progressDialog.isShowing())
+                                progressDialog.show();
+                            break;
+
+                        }
+                        if(i==networkInfo.length-1){
+                            Toast.makeText(getApplicationContext(),
+                                    "Don't have network connection!", Toast.LENGTH_LONG)
+                                    .show();
+                    }
+                }
+
+
+
+
 
             //Todo: need to check weather the user has Internet before attempting checking the data
-            // Start fetching the data from the Internet
-            new OnlineCredentialValidation().execute(email,password);
+            NetworkInfo activeNetworkInfo = connManager.getActiveNetworkInfo();
+            boolean available = false;
+            try {
+                available = activeNetworkInfo.isAvailable();
+                if(available){
+
+                    // Start fetching the data from the Internet
+                    new OnlineCredentialValidation().execute(email,password);
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "Network connection is not available!", Toast.LENGTH_LONG)
+                            .show();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+
+            }
+
 
 
         } else {

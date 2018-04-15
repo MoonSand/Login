@@ -2,6 +2,8 @@ package mg.studio.myapplication;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -119,10 +121,33 @@ public class Register extends AppCompatActivity {
     private void registerUser(final String name, final String email,
                               final String password) {
 
-        pDialog.setMessage("Registering ...");
-        if (!pDialog.isShowing()) pDialog.show();
         //Todo: Need to check Internet connection
-        new DownloadData().execute(name, email, password);
+        ConnectivityManager connManager = (ConnectivityManager) this
+                .getSystemService(CONNECTIVITY_SERVICE);
+        NetworkInfo[] networkInfo=null;
+        try {
+            networkInfo = connManager.getAllNetworkInfo();
+        }catch (NullPointerException e)
+        {
+            e.printStackTrace();
+        }
+
+        if (networkInfo != null) {
+            for (int i = 0; i < networkInfo.length; i++) {
+                // 判断获得的网络状态是否是处于连接状态
+                if (networkInfo[i].getState() == NetworkInfo.State.CONNECTED) {
+                    pDialog.setMessage("Registering ...");
+                    if (!pDialog.isShowing()) pDialog.show();
+
+                    new DownloadData().execute(name, email, password);
+                    break;
+
+                }
+            }
+        }else {
+            Toast.makeText(getApplication(), "Don't have network connection!", Toast.LENGTH_SHORT).show();
+        }
+
 
 
     }
