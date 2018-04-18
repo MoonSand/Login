@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':lifeCycle', ':userName', ':listView', ':UserName_Final', ':Layout', ':Layout_Final', ':ButtonDesign', ':Button_Toast', ':Button_Intent', ':Button_StartActivity', ':Button_StartActivity_extra', ':ImageButton', ':EditText', ':RadioButtons_listenter', ':RadioButtons_onclick', ':GetColor', ':GradienBackground', ':Weather_App_Design', ':ListView15', ':ListViewCustomAdapter', ':AudioRecorder', ':DataBase', ':FragmentOne', ':Webview', ':ServiceDemo', ':Service', ':Finigerprint', ':AppPraviteDirectory', ':AssetsFolder', ':IntentExtras'

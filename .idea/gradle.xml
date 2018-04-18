@@ -8,7 +8,37 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AppPraviteDirectory" />
+            <option value="$PROJECT_DIR$/AssetsFolder" />
+            <option value="$PROJECT_DIR$/AudioRecorder" />
+            <option value="$PROJECT_DIR$/ButtonDesign" />
+            <option value="$PROJECT_DIR$/Button_Intent" />
+            <option value="$PROJECT_DIR$/Button_StartActivity" />
+            <option value="$PROJECT_DIR$/Button_StartActivity_extra" />
+            <option value="$PROJECT_DIR$/Button_Toast" />
+            <option value="$PROJECT_DIR$/DataBase" />
+            <option value="$PROJECT_DIR$/EditText" />
+            <option value="$PROJECT_DIR$/Finigerprint" />
+            <option value="$PROJECT_DIR$/FragmentOne" />
+            <option value="$PROJECT_DIR$/GetColor" />
+            <option value="$PROJECT_DIR$/GradienBackground" />
+            <option value="$PROJECT_DIR$/ImageButton" />
+            <option value="$PROJECT_DIR$/IntentExtras" />
+            <option value="$PROJECT_DIR$/Layout" />
+            <option value="$PROJECT_DIR$/Layout_Final" />
+            <option value="$PROJECT_DIR$/ListView15" />
+            <option value="$PROJECT_DIR$/ListViewCustomAdapter" />
+            <option value="$PROJECT_DIR$/RadioButtons_listenter" />
+            <option value="$PROJECT_DIR$/RadioButtons_onclick" />
+            <option value="$PROJECT_DIR$/Service" />
+            <option value="$PROJECT_DIR$/ServiceDemo" />
+            <option value="$PROJECT_DIR$/UserName_Final" />
+            <option value="$PROJECT_DIR$/Weather_App_Design" />
+            <option value="$PROJECT_DIR$/Webview" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/lifeCycle" />
+            <option value="$PROJECT_DIR$/listView" />
+            <option value="$PROJECT_DIR$/userName" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

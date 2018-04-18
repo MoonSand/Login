@@ -1,0 +1,97 @@
+package mg.studio.activitylifecycle;
+
+/**
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ */
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private final String TAG = getClass().getSimpleName();
+    private String previousContent=null;
+    private String currentState = null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main0);
+
+        Log.d(TAG, "onCreate:" + TAG);
+        currentState = "onCreate";
+        this.setText();
+
+
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: " + TAG);
+        currentState = "onResume";
+        setText();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart: " + TAG);
+        currentState = "onRestart";
+        setText();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: " + TAG);
+        currentState = "onPause";
+        setText();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop: " + TAG);
+        currentState = "onStop";
+        setText();
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy: " + TAG);
+        currentState = "onDestroy";
+        setText();
+    }
+
+    private void setText() {
+        previousContent = ((TextView) findViewById(R.id.display)).getText().toString();
+
+        ((TextView) findViewById(R.id.display)).setText(previousContent + "\n" + currentState);
+    }
+    public void btn_start_activity(View view) {
+        Intent mIntent = new Intent(mg.studio.activitylifecycle.MainActivity.this,  mg.studio.activitylifecycle.Activity.class);
+        startActivity(mIntent);
+
+    }
+    public void btn_start_dialog(View view) {
+        Intent mIntent = new Intent(mg.studio.activitylifecycle.MainActivity.this,  mg.studio.activitylifecycle.Dialog.class);
+        startActivity(mIntent);
+
+    }
+
+}

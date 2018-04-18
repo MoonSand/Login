@@ -1,0 +1,57 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:3:5-43
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+application
+ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:7:5-22:19
+	android:label
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:11:9-41
+	android:allowBackup
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:12:9-40
+activity#cn.edu.cqu.buttontoast_extra.MainActivity
+ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:13:9-17:20
+	android:label
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:15:13-45
+	android:name
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:14:13-69
+activity#cn.edu.cqu.buttontoast_extra.SecondActivity
+ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:18:9-21:20
+	android:label
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:20:13-45
+	android:name
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml:19:13-71
+uses-sdk
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+		ADDED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
+		INJECTED from E:\repository\Login\Login\Button_StartActivity_extra\src\main\AndroidManifest.xml
